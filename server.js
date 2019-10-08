@@ -4,8 +4,7 @@ var bodyParser = require("body-parser");
 
 var properties = require("./config/properties");
 var db = require("./config/database");
-//hero routes
-var herosRoutes = require("./api/heros/heros.routes");
+
 var app = express();
 
 //configure bodyparser
@@ -14,6 +13,9 @@ var bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 
 //initialise express router
 var router = express.Router();
+
+//user routes
+var usersRoutes = require("./api/users/users.routes");
 
 // call the database connectivity function
 db();
@@ -37,8 +39,9 @@ app.use(function(req, res, next) {
 
 // use express router
 app.use("/api", router);
-//call heros routing
-herosRoutes(router);
+
+//call users routing
+usersRoutes(router);
 
 // intialise server
 app.listen(properties.PORT, (req, res) => {
