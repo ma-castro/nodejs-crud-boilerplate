@@ -1,13 +1,13 @@
 {
   "username": "nodejs-crud-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A nodejs express crud boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michael Anthony C. Castro",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.3"
